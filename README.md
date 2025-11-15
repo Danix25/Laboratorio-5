@@ -43,7 +43,7 @@ Electrodos
 -**Parte A**
 Luego de hacer una revisión bibliográfica acerca de la actividad simpática y parasimpática del sistema nervioso autónomo, de conocer los efectos de la misma en la frecuencia cardiaca y como sucede la variabilidad de la misma, además de descubrir el diagrama de Poincaré como una herramienta de análisis, se planteó el siguiente plan de acción para cumplir con el objetivo de la presente práctica:
 
-<img width="640" height="1600" alt="image" src="https://github.com/user-attachments/assets/c52c0005-b0d4-4978-a52f-0c452ff13f64" />
+<img width="540" height="1400" alt="image" src="https://github.com/user-attachments/assets/c52c0005-b0d4-4978-a52f-0c452ff13f64" />
 
 
 # 6. Conclusiones.
