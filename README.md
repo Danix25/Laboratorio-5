@@ -1,4 +1,4 @@
-# Laboratorio-5
+  # Laboratorio-5
 # Variabilidad de la Frecuencia Cardiaca (HRV) y balance auntonómico
 # TABBLA DE CONTENIDOS
 1. Objetivos y metodología del experimento.
@@ -87,14 +87,43 @@ Media RR: 0.6995s  SDNN: 0.0665s  RMSSD: 0.0524s  HR: 85.78 bpm
 
 Media RR: 0.6561s  SDNN: 0.1482s  RMSSD: 0.1864s  HR: 91.44 bpm
 
-Estos valores son muy importantes dentro del análisis de la variabilidad de la frecuencia cardiaca por varias razones:
+Estos valores son muy importantes dentro del análisis de la variabilidad de la frecuencia cardiaca por varias razones, tales como:
 
 1. La **media RR** nos indica la duración promedio de los intervalos entre latidos cardiacos, por lo que su valor ayudará a definir que tan rápido está latiendo el corazón. Con base a lo obtenido, se observa una ligera diferencia, ya que cuando el sujeto está leyendo, la media RR es más baja, por ende, su corazón late más rápido.
 
 2. La desviación estandar de los intervalos NN (**SDNN**) representada la variabilidad total de la frecuencia cardiaca. Este tipo de valores ayudan a indicar la capacidad del cuerpo para manejar el estrés, por lo que entre más alto sea, mayor capacidad de manejo tendrá. Para nuestro caso, cuando el sujeto se encuentra en reposo, tiene un manejo del estres más bajo que cuando está leyendo, a lo que se puede interpretar que para la persona resulta ser "relajante" leer.
 
-3. El **RMSSD** permite medir la actividad del sistema nervioso parasimpático, por lo que nos indica el nivel de recuperación o estado de descanso. Para este valor, ocurrió que el sujeto se encuentra más "descansado" en el momento en que se encuentra leyendo
+3. El **RMSSD** permite medir la actividad del sistema nervioso parasimpático, por lo que nos indica el nivel de recuperación o estado de descanso. Para este valor, ocurrió que el sujeto se encuentra más "descansado" en el momento en que se encuentra leyendo, que cuando estaba en total reposo. Esto se puede interpretar que para el sujeto de prueba resultó poco interesante la lectura, generando un ligero sueño.
 
+4. La frecuencia cardiaca (**HR**) es lo más conocido dentro del comportamiento cardiaco, ya que nos indica las veces que late el corazón por minuto, por lo que su frecuencia será proporcional al numero de látidos. En cuanto a los resultados obtenidos, se evidenció un ligero aumento de la frecuencia cardiaca al momento que el sujeto lee, lo cual resulta normal, ya que cuando una persona hace una actividad, su frecuencia cardiaca generalmente aumenta de valor.
+
+-**Parte C:**
+
+Finalmente, se obtuvo el diagrama de Poincaré para cada segmento de la señal ECG, obteniendo lo siguiente:
+
+- Para el segmento 1:
+
+<img width="596" height="587" alt="image" src="https://github.com/user-attachments/assets/f2626772-6aff-4ac3-b03d-243c8be0337b" />
+
+- Para el segmento 2:
+
+<img width="583" height="591" alt="image" src="https://github.com/user-attachments/assets/5f2d3b59-9760-4a10-805d-f7397c91b222" />
+
+Con base a los diagrama obtenidos, se puede afirmar que el segmento 1 evidencia una mayor estabilidad, ya que los puntos se encuentran concentrados en una zona especifica adoptando una forma de elipse, reflejando la estabilidad de la señal. En cambio, para el segmento 2 se puede ver una mayor disperción de los datos, a pesar de que la mayoria de ellos también se ubiquen concentrados en una zona determinada, por lo que se puede afirmar que los puntos más variados reflejan el cambio en la variabilidad de la frecuencia cardiaca cuando la persona está leyendo. 
+
+Finalmente, con base a los diagramas obtenidos se calcularon el indice de actividad vagal (CVI) y el indice de actividad simpática (CSI), a lo que se obtuvo lo siguiente:
+
+Poincaré Segmento 1:
+
+SD1=0.0370  SD2=0.0861 CSI=2.3300  CVI= 2.4972
+
+Poincaré Segmento 2:
+
+SD1=0.1318  SD2=0.1622 CSI=1.2307  CVI= 1.6698
+
+El Indice de Actividad Simpática (**CSI**) es importante para el análisis de la variabilidad de la frecuencia cardiaca, ya que, como sus siglas lo mencionan, es el principal indicador del componente simpático del sistema nervioso autónomo, relacionado con la respuesta huida del cuerpo. Con base a nuestros reusltados, se puede ver que el CSI es más alto en el segmento 1 que en el 2, a lo que se puede interpretar que la persona se encontraba en un estado de "estrés", cuando estaba en total reposo. Esto puede significar que para el sujeto le generó una molestia el tener que estar en total reposo.
+
+En cuanto al Indice de Actividad vagal (**CVI**), nos permite evaluar la influencia del sistema nervioso parasimpático en el corazón y esto se obtiene calculando el logaritmo del producto de la variabilidad longitudinal (4*SD2) y transversal (4*SD1) del diagrama de poincaré. Este valor nos permite estudiar la función parasimpática, reflejando el nivel de recuperación del estres y por ende, una mayor salud cardiovascular. En la práctica, se evidencia que el sujeto de prueba tiene una mejor recuperación del estrés cuando está en reposo, que cuando está leyendo en voz alta. Esto se puede interpretar que a la persona le genera cierto estrés o molestía cuando está leyendo, ya sea por el tipo de lectura u otro tipo de situación.
 
 # 6. Conclusiones.
 # 7. Aplicaciones biomédicas.
