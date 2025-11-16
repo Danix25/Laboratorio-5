@@ -44,17 +44,17 @@ Electrodos
 
 Luego de hacer una revisión bibliográfica acerca de la actividad simpática y parasimpática del sistema nervioso autónomo, de conocer los efectos de la misma en la frecuencia cardiaca y como sucede la variabilidad de la misma, además de descubrir el diagrama de Poincaré como una herramienta de análisis, se planteó el siguiente plan de acción para cumplir con el objetivo de la presente práctica:
 
-<img width="540" height="1400" alt="image" src="https://github.com/user-attachments/assets/c52c0005-b0d4-4978-a52f-0c452ff13f64" />
+<img width="440" height="1300" alt="image" src="https://github.com/user-attachments/assets/c52c0005-b0d4-4978-a52f-0c452ff13f64" />
 
 Seguido de esto, con ayuda de un sujeto de prueba se capturó una señal ECG durante 4 minutos, en el que los primeros 2 minutos se encuentra en reposo total y los 2 ultimos leyendo un escrito en voz alta, obteniendo la siguiente señal:
 
-<img width="1159" height="457" alt="image" src="https://github.com/user-attachments/assets/6b3db755-10f7-4791-be10-9541a3dbccb1" />
+<img width="1059" height="357" alt="image" src="https://github.com/user-attachments/assets/6b3db755-10f7-4791-be10-9541a3dbccb1" />
 
 -**Parte B:**
 
 Para este apartado, se aplicaron los filtros digitales necesarios para eliminar el ruido de la señal, para que esta pueda visualizarse de una manera más clara. Para esto, se aplicó un filtro pasa banda de 0.5 Hz a 45 Hz, siendo valores típicos para un ECG, obteniendo la siguiente señal:
 
-<img width="1073" height="414" alt="image" src="https://github.com/user-attachments/assets/9febfcdc-6ef1-43eb-95a8-6193caf112f4" />
+<img width="973" height="314" alt="image" src="https://github.com/user-attachments/assets/9febfcdc-6ef1-43eb-95a8-6193caf112f4" />
 
 Seguido de esto, se obtuvo la ecuación en diferencia del filtro, siendo esto muy importante para el modelamiento y la descripción del comportamiento del filtro, ya que supone la forma matemática de representar la relación entre la señal de entrada y la señal de salida del filtro digital, la cual resultó:
 
@@ -64,17 +64,17 @@ Luego de esto, se hizo la respectiva segmentación de la señal para cuando el s
 
 - En reposo:
 
-<img width="1124" height="414" alt="image" src="https://github.com/user-attachments/assets/ca58683a-d8c6-44f2-a255-2f45cfe46300" />
+<img width="1024" height="314" alt="image" src="https://github.com/user-attachments/assets/ca58683a-d8c6-44f2-a255-2f45cfe46300" />
 
 - Leyendo e voz alta:
 
-<img width="1116" height="416" alt="image" src="https://github.com/user-attachments/assets/a563654f-0fd5-4ef9-937b-0aa370b99cdc" />
+<img width="1016" height="316" alt="image" src="https://github.com/user-attachments/assets/a563654f-0fd5-4ef9-937b-0aa370b99cdc" />
 
 Además de esto, se hizo el cálculo de los intervalos R-R para cada segmento de nuestra señal y con base a esta información se obtuvo una nueva señal, en donde cada punto representa el tiempo entre un pico R y el siguiente:
 
-<img width="1206" height="459" alt="image" src="https://github.com/user-attachments/assets/13d0ed93-1073-4b0d-9c93-b4cbf5b11241" />
+<img width="1106" height="359" alt="image" src="https://github.com/user-attachments/assets/13d0ed93-1073-4b0d-9c93-b4cbf5b11241" />
 
-<img width="1204" height="454" alt="image" src="https://github.com/user-attachments/assets/4d462d94-5e35-44d3-b813-62db496bd897" />
+<img width="1104" height="354" alt="image" src="https://github.com/user-attachments/assets/4d462d94-5e35-44d3-b813-62db496bd897" />
 
 
 Luego de esto, se hizo el análisis de la HRV (variabilidad de la frecuencia cardiaca) y se compararon los datos entre ambos segmentos, obteniendo:
@@ -103,11 +103,11 @@ Finalmente, se obtuvo el diagrama de Poincaré para cada segmento de la señal E
 
 - Para el segmento 1:
 
-<img width="596" height="587" alt="image" src="https://github.com/user-attachments/assets/f2626772-6aff-4ac3-b03d-243c8be0337b" />
+<img width="496" height="487" alt="image" src="https://github.com/user-attachments/assets/f2626772-6aff-4ac3-b03d-243c8be0337b" />
 
 - Para el segmento 2:
 
-<img width="583" height="591" alt="image" src="https://github.com/user-attachments/assets/5f2d3b59-9760-4a10-805d-f7397c91b222" />
+<img width="483" height="491" alt="image" src="https://github.com/user-attachments/assets/5f2d3b59-9760-4a10-805d-f7397c91b222" />
 
 Con base a los diagrama obtenidos, se puede afirmar que el segmento 1 evidencia una mayor estabilidad, ya que los puntos se encuentran concentrados en una zona especifica adoptando una forma de elipse, reflejando la estabilidad de la señal. En cambio, para el segmento 2 se puede ver una mayor disperción de los datos, a pesar de que la mayoria de ellos también se ubiquen concentrados en una zona determinada, por lo que se puede afirmar que los puntos más variados reflejan el cambio en la variabilidad de la frecuencia cardiaca cuando la persona está leyendo. 
 
