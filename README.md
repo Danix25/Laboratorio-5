@@ -3,12 +3,11 @@
 # TABBLA DE CONTENIDOS
 1. Objetivos y metodología del experimento.
 2. Marco conceptual.
-
 4. Diagramas de flujo.
-5. Adquisición de la señal.
-6. Análisis de resultados.
-7. Conclusiones.
-8. Aplicaciones biomédicas.
+6. Adquisición de la señal.
+7. Análisis de resultados.
+8. Conclusiones.
+9. Aplicaciones biomédicas.
 
 # 1. Objetivos y metodología del experimento
 La presente práctica tiene como objetivo principal el identificar los cambios en el balance auntonómico mediante análisis temporal de la variabilidad de la frecuencia cardiaca (HRV).
@@ -43,12 +42,17 @@ CSI  El Índice Simpático se relaciona con la elongación de la nube qué tan l
 En este laboratorio se utilizo el Diagrama de Poincaré (Punto 3) como método para cuantificar la HRV (Punto 2) y, a su vez, usar esos valores (CVI y CSI) para determinar objetivamente la influencia del Sistema Simpático y Parasimpático (Punto 1) durante el reposo y la lectura.
 
 # 3. Diagramas de flujo.
+
+<img width="400" height="1000" alt="codigo" src="https://github.com/user-attachments/assets/ae0c9345-277a-47d8-8e50-b2668dd39b51" />
+
 # 4. Adquisición de la señal.
 
 Para la captura de la señal, se colocaron dos electrodos en las muñecas de cada brazo y uno en la foza iliaca derecha. La señal analógica fue acondicionada utilizando un módulo AD8232. Posteriormente, la señal fue digitalizada y adquirida por un sistema de adquisición de datos (DAQ) de National Instruments (controlado a través de la librería nidaqmx de Python), y exportada al archivo de texto para su análisis.
 Las características de la señal cargada en el script de análisis son:
 Archivo:.txt
 Frecuencia de Muestreo (fs): 2000 Hz (Detectada desde los datos del archivo)
+
+![imagen de refencia](https://github.com/user-attachments/assets/7ca01aa7-5fec-48c5-b654-5a996463fac9)
 
 **Materiales utilizados**
 
@@ -60,13 +64,16 @@ Cables
 
 Electrodos
 
+
+
 # 5. Análisis de resultados.
 
 -**Parte A:**
 
 Luego de hacer una revisión bibliográfica acerca de la actividad simpática y parasimpática del sistema nervioso autónomo, de conocer los efectos de la misma en la frecuencia cardiaca y como sucede la variabilidad de la misma, además de descubrir el diagrama de Poincaré como una herramienta de análisis, se planteó el siguiente plan de acción para cumplir con el objetivo de la presente práctica:
 
-<img width="440" height="1300" alt="image" src="https://github.com/user-attachments/assets/c52c0005-b0d4-4978-a52f-0c452ff13f64" />
+<img width="400" height="1000" alt="plan de accion" src="https://github.com/user-attachments/assets/868b471c-ed7a-4e98-bf72-77c6fb64a2bd" />
+
 
 Seguido de esto, con ayuda de un sujeto de prueba se capturó una señal ECG durante 4 minutos, en el que los primeros 2 minutos se encuentra en reposo total y los 2 ultimos leyendo un escrito en voz alta, obteniendo la siguiente señal:
 
