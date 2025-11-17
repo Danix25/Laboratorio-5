@@ -3,27 +3,49 @@
 # TABBLA DE CONTENIDOS
 1. Objetivos y metodología del experimento.
 2. Marco conceptual.
-3. Diagramas de flujo.
-4. Adquisición de la señal.
-5. Análisis de resultados.
-6. Conclusiones.
-7. Aplicaciones biomédicas.
+
+4. Diagramas de flujo.
+5. Adquisición de la señal.
+6. Análisis de resultados.
+7. Conclusiones.
+8. Aplicaciones biomédicas.
 
 # 1. Objetivos y metodología del experimento
 La presente práctica tiene como objetivo principal el identificar los cambios en el balance auntonómico mediante análisis temporal de la variabilidad de la frecuencia cardiaca (HRV).
 
 # 2. Marco conceptual.
+Para analizar el estado del cuerpo, no basta con saber qué tan rápido late el corazón, sino qué tan adaptable es su ritmo. Esta adaptabilidad es controlada por el Sistema Nervioso Autónomo y puede medirse cuantitativamente mediante la Variabilidad de la Frecuencia Cardíaca (HRV), la cual se visualiza y analiza eficazmente con herramientas como el Diagrama de Poincaré.
 
-**Actividad simpática y parasimpática del sistema nerviosos autónomo**
+Sistema Nervioso Autónomo (SNA)
 
-**Variabilidad de la frecuencia cardiaca (HRV)**
+El SNA regula todas las funciones involuntarias de nuestro cuerpo desde la digestión hasta la respiración. Funciona a través de un balance delicado entre dos ramas opuestas:
 
-**Diagrama de Poincaré**
+Actividad Simpática (SNS): Es el acelerador del cuerpo. Se activa en situaciones de estrés, ejercicio o alerta. Libera adrenalina y noradrenalina, lo que aumenta la frecuencia cardíaca y la fuerza de contracción.
+Actividad Parasimpática (SNP): Es el freno del cuerpo. Domina en estados de calma, relajación y digestión. Libera acetilcolina a través del nervio vago, lo que disminuye la frecuencia cardíaca y promueve la recuperación.
+
+El estado del corazón en cualquier momento es el resultado directo del balance autonómico, es decir, la competencia entre las señales simpáticas y parasimpáticas.
+
+Variabilidad de la Frecuencia Cardíaca (HRV)
+
+La HRV es una de las mejores formas no invasivas de medir este balance autonómico.
+
+La HRV no es la frecuencia cardíaca (latidos por minuto), sino la medida de la variación en el tiempo entre latidos consecutivos. En un electrocardiograma (ECG), esto se mide como la variación en los intervalos R-R (el tiempo entre cada pico R). Un corazón sano no es un metrónomo perfecto; sus ritmos varían ligeramente de un latido a otro. Una HRV alta (gran variación) es positiva. Indica que el sistema parasimpático  está activo y que el cuerpo es adaptable, saludable y capaz de responder a los cambios. Una HRV baja se asocia con un dominio del sistema simpático. Es un indicador de estrés, fatiga, enfermedad o una pobre capacidad de adaptación.
+
+Diagrama de Poincaré.
+
+El Diagrama de Poincaré (también conocido como "Lorenz plot" en el artículo de Toichi) es una herramienta gráfica poderosa que nos permite visualizar la HRV y cuantificar el balance autonómico.
+
+ Es un gráfico de dispersión donde cada intervalo R-R (llamado $RR_n$) se grafica en el eje X contra el intervalo R-R siguiente ($RR_{n+1}$) en el eje Y. Esto genera una "nube de puntos" cuya forma y dispersión revelan el estado del SNA. Una nube grande, redonda y dispersa indica una HRV alta, sugiriendo un dominio parasimpático. Una nube pequeña, estrecha y alargada indica una HRV baja, sugiriendo un dominio simpático.
+
+El Índice Vagal (Parasimpático) se relaciona con el área o dispersión total de la nube. Un CVI alto significa mayor actividad parasimpática.
+CSI  El Índice Simpático se relaciona con la elongación de la nube qué tan larga es en comparación con qué tan ancha es. Un CSI alto significa mayor actividad simpática.
+
+En este laboratorio se utilizo el Diagrama de Poincaré (Punto 3) como método para cuantificar la HRV (Punto 2) y, a su vez, usar esos valores (CVI y CSI) para determinar objetivamente la influencia del Sistema Simpático y Parasimpático (Punto 1) durante el reposo y la lectura.
 
 # 3. Diagramas de flujo.
 # 4. Adquisición de la señal.
 
-Para la captura de la señal, se colocaron dos electrodos en las muñecas de cada brazo y uno en el tobillo del sujeto de prueba. La señal analógica fue acondicionada utilizando un módulo AD8232. Posteriormente, la señal fue digitalizada y adquirida por un sistema de adquisición de datos (DAQ) de National Instruments (controlado a través de la librería nidaqmx de Python), y exportada al archivo de texto para su análisis.
+Para la captura de la señal, se colocaron dos electrodos en las muñecas de cada brazo y uno en la foza iliaca derecha. La señal analógica fue acondicionada utilizando un módulo AD8232. Posteriormente, la señal fue digitalizada y adquirida por un sistema de adquisición de datos (DAQ) de National Instruments (controlado a través de la librería nidaqmx de Python), y exportada al archivo de texto para su análisis.
 Las características de la señal cargada en el script de análisis son:
 Archivo:.txt
 Frecuencia de Muestreo (fs): 2000 Hz (Detectada desde los datos del archivo)
@@ -126,4 +148,26 @@ El Indice de Actividad Simpática (**CSI**) es importante para el análisis de l
 En cuanto al Indice de Actividad vagal (**CVI**), nos permite evaluar la influencia del sistema nervioso parasimpático en el corazón y esto se obtiene calculando el logaritmo del producto de la variabilidad longitudinal (4*SD2) y transversal (4*SD1) del diagrama de poincaré. Este valor nos permite estudiar la función parasimpática, reflejando el nivel de recuperación del estres y por ende, una mayor salud cardiovascular. En la práctica, se evidencia que el sujeto de prueba tiene una mejor recuperación del estrés cuando está en reposo, que cuando está leyendo en voz alta. Esto se puede interpretar que a la persona le genera cierto estrés o molestía cuando está leyendo, ya sea por el tipo de lectura u otro tipo de situación.
 
 # 6. Conclusiones.
+Se cumplió el objetivo de la práctica, logrando adquirir una señal de ECG, procesarla y cuantificar la variabilidad de la frecuencia cardíaca (HRV) en dos estados distintos, reposo y lectura en voz alta. Los métodos de dominio del tiempo (SDNN, RMSSD) y no lineales (Poincaré) permitieron identificar cambios claros en el balance autonómico. 
+
+La parte de leer en voz alta indujo un aumento en la frecuencia cardíaca media (de 85.78 a 91.44 lpm) y una disminución del Índice Vagal Cardíaco (CVI) (de 2.49 a 1.66). Ambos resultados son consistentes con la hipótesis de que una tarea cognitiva y física  genera una ligera carga de estrés provocando un aumento en la actividad simpática y una disminucion de la actividad parasimpática.
+
+Se encontró un resultado paradójico: aunque la frecuencia cardíaca aumentó, las métricas de variabilidad como SDNN (0.06 a 0.14 s) y RMSSD (0.05 a 0.18 s) también aumentaron drásticamente. Un RMSSD alto generalmente indica mayor relajación.
+
+La explicación para este suceso no es que el sujeto se relajó al leer, sino el efecto de la Arritmia Sinusal Respiratoria (ASR). Al leer en voz alta el sujeto se ve forzado a adoptar un patrón de respiración profundo y rítmico  como lo es inhalar, hablar, inhalar, hablar. Esta respiración controlada se acopla fuertemente con el nervio vago, exagerando artificialmente las métricas de HRV especialmente el RMSSD y la dispersión en el gráfico de Poincaré, enmascarando el verdadero estado de estrés autonómico.
+
+Esto demuestra que, si bien el análisis de HRV es una herramienta muy biena  su interpretación no perfecta. Factores como la respiración son una variable de confusión. En este experimento, la frecuencia cardíaca  y el Índice Vagal  fueron los indicadores más fiables del ligero estrés inducido por la tarea, mientras que el SDNN y RMSSD fueron dominados por el artefacto respiratorio.
+
 # 7. Aplicaciones biomédicas.
+
+El análisis de la Variabilidad de la Frecuencia Cardíaca (HRV) ha trascendido la investigación para convertirse en una herramienta de diagnóstico y monitoreo no invasiva fundamental en múltiples campos de la medicina y la salud:
+
+La HRV es un potente predictor de riesgo después de un infarto agudo de miocardio. Pacientes con una HRV baja (poca adaptabilidad) tienen una tasa de mortalidad significativamente mayor. También se usa para evaluar el riesgo de arritmias súbitas.
+
+Se utiliza para monitorear la carga de entrenamiento en atletas de élite. Una caída sostenida en la HRV (específicamente en RMSSD) es un indicador clave de sobreentrenamiento y fatiga, señalando al entrenador que el atleta necesita más días de recuperación para evitar lesiones y optimizar el rendimiento.
+
+Es la herramienta estándar muy importante para el diagnóstico temprano de la  neuropatía autonómica diabética. En pacientes con diabetes, el daño a los nervios (incluido el nervio vago) reduce drásticamente la HRV, y esta prueba puede detectarlo antes de que aparezcan síntomas severos.
+
+El análisis de la HRV se usa para cuantificar objetivamente el estrés crónico, la ansiedad y la depresión, condiciones que se correlacionan con una HRV baja (un sistema simpático hiperactivo).
+
+El monitoreo de la variabilidad de la frecuencia cardíaca fetal es crucial durante el parto. Una disminución en la variabilidad es un signo de alerta de sufrimiento fetal o falta de oxígeno, permitiendo al equipo médico intervenir a tiempo.
